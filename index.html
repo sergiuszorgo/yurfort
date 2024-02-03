@@ -68,28 +68,28 @@
 				<div class="about_info">
 					<div class="about_item">
 						<svg class="icon">
-							<use href="/img/symbols.svg#icon-users"></use>
+							<use href="./img/symbols.svg#icon-users"></use>
 						</svg>
 						<p class="about_didgit">48</p>
 						<p class="about_title">Спеціалістів працює для Вас</p>
 					</div>
 					<div class="about_item">
 						<svg class="icon">
-							<use href="/img/symbols.svg#icon-gavel"></use>
+							<use href="./img/symbols.svg#icon-gavel"></use>
 						</svg>
 						<p class="about_didgit">1 956</p>
 						<p class="about_title">Позитивних судових рішень</p>
 					</div>
 					<div class="about_item">
 						<svg class="icon">
-							<use href="/img/symbols.svg#icon-conversation"></use>
+							<use href="./img/symbols.svg#icon-conversation"></use>
 						</svg>
 						<p class="about_didgit">8 523</p>
 						<p class="about_title">Безкоштовних консультацій</p>
 					</div>
 					<div class="about_item">
 						<svg class="icon">
-							<use href="/img/symbols.svg#icon-post-office"></use>
+							<use href="./img/symbols.svg#icon-post-office"></use>
 						</svg>
 						<p class="about_didgit">1</p>
 						<p class="about_title">Активних офісів по всій Україні</p>
@@ -162,18 +162,22 @@
 		<div class="wrapper" id="consult">
 			<div class="consult">
 				<div class="consult_text">
-					<h2>Консультація з юристом онлайн</h2>
+					<h2 class="consult_head">Консультація з юристом онлайн</h2>
 					<p><span>Ви можете поставити запитання фахівцю і почати вирішення пи-тання вже зараз.</span></p>
 					<p>Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирі-шення.</p>
 					<p><span>Наша компанія спеціалізується на захисті прав простих людей і має великий досвід в юридичній сфері.</span></p>
 				</div>
 				<div class="consult_form" id="form">
-					<form id="tg" class="consult-group">
-						<input type="text" name="name" placeholder="Введіть П.І.Б.">
-						<input type="tel" name="tel" placeholder="Введіть телефон">
-						<input type="email" name="email" placeholder="Введіть E-mail">
-						<textarea name="message" cols="30" rows="10" placeholder="Коротко опишіть проблему"></textarea>
-						<input type="submit" value="Відправити запит">
+					<form id="tg" class="consult_group">
+						<input type="text" name="name" placeholder="Введіть П.І.Б." class="form_input">
+						<span class="input_tel_mail">
+							<input type="tel" name="tel" placeholder="Введіть телефон" class="form_input" pattern="[\+]\d{2}\[\(]\d{3}[\)]\\d{3}\d{2}\d{2}" minlength="5" maxlength="19" required>
+							<input type="email" name="email" placeholder="Введіть E-mail" class="form_input">
+						</span>
+						<textarea name="message" rows="5" maxlength="500" placeholder="Коротко опишіть проблему" class="form_area"></textarea>
+						<span class="submin_span">
+							<input type="submit" value="Залишити заявку" class="form_submit">
+						</span>
 					</form>
 				</div>
 			</div>
@@ -212,7 +216,8 @@
 			</div>
 		</footer>
 		<!-- /.F-O-O-T-E-R -->
-	<script src="index.js"></script>
+	<script src="index.js">
+	</script>
 	
 </body>
 </html>
