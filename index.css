@@ -357,7 +357,7 @@ header {
 	justify-content: center;
 }
 
-.about_link, .services_link {
+.about_link {
 	display: inline-block;
 	text-align: center;
 	padding: 12px 22px;
@@ -372,7 +372,7 @@ header {
 	transition: var(--transit);
 }
 
-.about_link:hover, .services_link:hover{
+.about_link:hover {
 	background-color: var(--main-bg-col);
 	color: var(--sec-text-col);
 	border-color: var(--accent-col);
@@ -455,6 +455,7 @@ svg.icon {
 	font-weight: 500;
 }
 
+
 @media screen and (min-width: 1200px) {
 	.section_grid {
 		flex-direction: row;
@@ -492,14 +493,11 @@ svg.icon {
 }
 
 .services_item {
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	height: 220px;
 	width: 100%;
-	padding: 30px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color: var(--third-bg-col);
-	gap: 20px;
-	transition: var(--transit);
 	border-radius: 6px;
 }
 
@@ -507,10 +505,83 @@ svg.icon {
 	box-shadow: var(--box-card-shadow);
 }
 
+.services_child {
+	width: 100%;
+	height: 100%;
+	transition: var(--transit);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+}
+
+.srv-one {
+	background-image: url(./img/cards/militarypravo.webp);
+}
+
+.srv-two {
+	background-image: url(./img/cards/simeynpravo.webp);
+}
+
+.srv-three {
+	background-image: url(./img/cards/bankpravo.webp);
+}
+
+.srv-four {
+	background-image: url(./img/cards/penspravo.webp);
+}
+
+.srv-five {
+	background-image: url(./img/cards/dtppravo.webp);
+}
+
+.srv-six {
+	background-image: url(./img/cards/adminpravo.webp);
+}
+
+.srv-seven {
+	background-image: url(./img/cards/defencpravo.webp);
+}
+
+.srv-eight {
+	background-image: url(./img/cards/earthpravo.webp);
+}
+
+.srv-nine {
+	background-image: url(./img/cards/krimpravo.webp);
+}
+
+.srv-ten {
+	background-image: url(./img/cards/notarpravo.webp);
+}
+
+.services_bott {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: rgba(47, 48, 58, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .services_title {
+	color: var(--accent-col);
 	text-align: center;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 20px;
+	transition: var(--transit);
+}
+
+.services_item:hover .services_title {
+	color: var(--main-bg-col);
 }
 
 @media (min-width: 768px) {
@@ -622,6 +693,16 @@ svg.icon {
 		flex-direction: row;
 		align-items: flex-start;
 	}
+	.services_item:hover .services_child {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+	}
+	.services_child::before {
+		opacity: 0;
+	}
+	
 }
 
 /* /////FOOTER */
