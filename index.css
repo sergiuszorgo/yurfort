@@ -244,8 +244,8 @@ header {
 
 .hero {
 	height: 100vh;
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-01.jpg);
-	background-image: linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-01.jpg);
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-05.jpg);
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-05.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	-moz-background-size: cover;
@@ -616,4 +616,18 @@ svg.icon {
 		flex-direction: row;
 		align-items: flex-start;
 	}
+}
+
+/* /////FOOTER */
+
+footer {
+	background-color: var(--sec-text-col);
+	
+}
+
+.adr_list {
+	
+}
+.foot_adr {
+
 }
