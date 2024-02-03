@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
 :root {
 	--main-bg-col: #FFF;
 	--main-text-col: #212121;
@@ -85,6 +85,12 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.logo svg {
+	width: 50px;
+	height: 50px;
+	fill: var(--accent-col);
 }
 
 .burger {
@@ -626,8 +632,75 @@ footer {
 }
 
 .adr_list {
-	
+	padding: 20px 26px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
-.foot_adr {
 
+.foot_text h2 {
+	font-family: 'Comfortaa';
+	color: var(--main-bg-col);
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 16px;
+
+}
+
+.foot_text p {
+	color: var(--main-bg-col);
+}
+
+.foot_adress {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+
+.foot_adr {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.foot_adr a {
+	font-style: normal;
+	color: var(--main-bg-col);
+	transition: var(--transit);
+}
+
+.foot_adr a:hover {
+	text-decoration: underline var(--accent-col);
+	color: var(--accent-col);
+}
+
+.foot_list {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.foot_icon {
+	fill: var(--accent-col);
+	width: 32px;
+	height:	32px;
+	transition: var(--transit);	
+}
+
+.foot_icon:hover {
+	fill: var(--main-bg-col);
+}
+
+@media (min-width: 768px) {
+	.adr_list {
+		flex-direction: row;
+	}
+	.foot_text, .foot_adress {
+		width: calc((100% - 20px) / 2);
+	}
+	.foot_adress {
+		align-items: end;
+		justify-content: space-between;
+	}
 }
