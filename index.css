@@ -717,10 +717,52 @@ svg.icon {
 
 /* ////FEED_BACK */
 
-.feed_back {
+/* .feed_back {
 
+} */
+
+.feed-gallery {
+	padding-bottom: 40px;
 }
 
+.main-gallery {
+	padding: 10px 0;
+	height: 640px;
+	/* background: var(--sec-bg-col); */
+}
+
+.gallery-cell {
+  width: 88%;
+	height: 100%;
+	margin-right: 10px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	gap: 20px;
+	border: 1px solid var(--sec-border-col);
+}
+
+@media screen and ( min-width: 768px ) {
+  .gallery-cell { width: 50%; }
+}
+
+.gallery-img {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+.gallery-title {
+	font-size: 18px;
+	color: var(--main-text-col);
+	font-weight: 500;
+}
+.gallery-text {
+	font-size: 16px;
+	color: var(--main-text-col);
+	text-align: justify;
+}
 /* /////FOOTER */
 
 footer {
