@@ -228,10 +228,77 @@ header {
 }
 
 .burger_list {
-	padding: 10vw;
+	position: absolute;
+	top: 60px;
+	left: 0;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	transition: var(--transit);
+	background-color: var(--sec-text-col);
+	gap: 0;
+	padding-top: 0;
+}
+
+.menucheck:checked ~ .burger_list {
+	opacity: 1;
+	height: 100vh;
 	gap: 20px;
+	padding-top: 40px;
+}
+
+.menucheck {
+	display: none;
+}
+
+.navburger {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.navburger::before {
+	position: absolute;
+	content: '';
+	width: 32px;
+	height: 2px;
+	box-shadow: 0 10px var(--accent-col);
+	background-color: var(--accent-col);
+	transition: var(--transit);
+	transform: translateY(-10px);
+}
+
+.navburger::after {
+	position: absolute;
+	content: '';
+	width: 32px;
+	height: 2px;
+	background-color: var(--accent-col);
+	transition: var(--transit);
+	transform: translateY(10px);
+}
+
+.menucheck:checked ~ .navburger::before {
+	transform: translateY(0) rotate(45deg);
+	box-shadow: 0 0 transparent;
+}
+
+.menucheck:checked ~ .navburger::after {
+	transform: translateY(0) rotate(-45deg);
+}
+
+@media (min-width: 1200px) {
+	.navburger {
+		display: none;
+	}
 }
 
 .burger_link {
@@ -655,6 +722,14 @@ svg.icon {
 	background-color: var(--third-bg-col);
 	font-size: 16px;
 }
+
+.alert {
+	
+}
+
+.toast_show {
+	display: block;
+  }
 
 .consult_group textarea {
 	resize: none;
