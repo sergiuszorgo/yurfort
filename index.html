@@ -1,50 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="./css/flickity.css">
+	<!-- <link rel="stylesheet" href="./css/toast.min.css"> -->
 	<title>Юридична Сила</title>
 </head>
 <body>
 	<header class="header">
 	<div class="menu">
-			<p class="logo">"Юридична сила"</p>
+		<p class="logo">"Юридична сила"</p>
 		<ul class="header_list">
 			<li class="header_item"><a href="#our_info" class="header_link">Про нас</a></li>
 			<li class="header_item"><a href="#our_services" class="header_link">Наші послуги</a></li>
 			<li class="header_item"><a href="#consult" class="header_link">Юрист онлайн</a></li>
 			<li class="header_item"><a href="#feed_back" class="header_link">Відгуки</a></li>
-			<li class="header_item"><a href="#articles" class="header_link">Статті</a></li>
 			<li class="header_item"><a href="#footer" class="header_link">Контакти</a></li>
 		</ul>
 		<address>
-			<a href="mailto:chto-to@gmail.com">chto-to@gmail.com</a>
-			<a href="tel:+380670000000">+38 (067) 000-00-00</a>
+			<a href="tel:+380737770222">+38 (073) 777-0-222</a>
+			<a href="tel:+380686980850">+38 (068) 698-0-850</a>
 		</address>
-		<div class="burger">
-		</div>
+		<!-- <div class="burger">
+		</div> -->
+		<input id="burger" type="checkbox" class="menucheck">
+		<label for="burger" class="navburger"></label>
+		<ul class="burger_list">
+			<li class="burger_item"><a href="#our_info" class="burger_link" onclick='brgrSwitch()'>Про нас</a></li>
+			<li class="burger_item"><a href="#our_services" class="burger_link" onclick='brgrSwitch()'>Наші послуги</a></li>
+			<li class="burger_item"><a href="#consult" class="burger_link" onclick='brgrSwitch()'>Юрист онлайн</a></li>
+			<li class="burger_item"><a href="#feed_back" class="burger_link" onclick='brgrSwitch()'>Відгуки</a></li>
+			<li class="burger_item"><a href="#footer" class="burger_link" onclick='brgrSwitch()'>Контакти</a></li>
+		</ul>
 	</div>
 	</header>
-	<!-- /.header -->
-	<div class="backdrop">
-		<div class="greyfield"></div>
-		<div class="whitefield">
-			<ul class="burger_list">
-				<li class="burger_item"><a href="#our_info" class="burger_link">Про нас</a></li>
-				<li class="burger_item"><a href="#our_services" class="burger_link">Наші послуги</a></li>
-				<li class="burger_item"><a href="#consult" class="burger_link">Юрист онлайн</a></li>
-				<li class="burger_item"><a href="#feed_back" class="burger_link">Відгуки</a></li>
-				<li class="burger_item"><a href="#articles" class="burger_link">Статті</a></li>
-				<li class="burger_item"><a href="#footer" class="burger_link">Контакти</a></li>
-			</ul>
-		</div>
-		<div class="menu-btn"></div>
-	</div>
-	<!-- /.backdrop -->
 		<div class="hero">
 			<div class="hero_wrap">
+				<svg class="hero_logo">
+					<use href="./img/symbols.svg#icon-vesi"></use>
+				</svg>
 				<h1 class="hero_head">Безкоштовна консультація з будь-яких юридичних питань</h1>
 			<p class="hero_descr">Ми здійснюємо безкоштовні консультації для громадян з усіх питань, пов’язаних з правовою сферою та законами України!</p>
 			<a href="#form" class="hero_btn">залишити заявку</a>
@@ -195,14 +191,16 @@
 					<p>Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирі-шення.</p>
 					<p><span>Наша компанія спеціалізується на захисті прав простих людей і має великий досвід в юридичній сфері.</span></p>
 				</div>
-				<div class="consult_form" id="form">
+				<div id="form" class="consult_form" >
 					<form id="tg" class="consult_group">
 						<input type="text" name="name" placeholder="Введіть П.І.Б." class="form_input">
 						<input type="tel" name="tel" placeholder="Введіть телефон" class="form_input" pattern="[\+]\d{2}\[\(]\d{3}[\)]\\d{3}\d{2}\d{2}" minlength="5" maxlength="19" required>
 						<textarea name="message" rows="5" maxlength="500" placeholder="Коротко опишіть проблему" class="form_area"></textarea>
+						<!-- <div id="success" class="alert" style="display: block">Сообщение отправлено</div> -->
 						<span class="submin_span">
 							<input type="submit" value="Залишити заявку" class="form_submit">
 						</span>
+						<!-- без заголовка -->
 					</form>
 				</div>
 			</div>
@@ -257,11 +255,11 @@
 				</div>
 		</div>
 		<!-- /.feed_back -->
-		<div class="wrapper" id="articles">
+		<!-- <div class="wrapper" id="articles">
 			<div class="articles">
 				
 			</div>
-		</div>
+		</div> -->
 		<!-- /.articles -->
 		<footer>
 			<div class="adr_list" id="footer">
@@ -271,22 +269,22 @@
 				</div>
 				<div class="foot_adress">
 					<address class="foot_adr">
-						<a href="mailto:chto-to@gmail.com">chto-to@gmail.com</a>
-						<a href="tel:+380670000000">+38 (067) 000-00-00</a>
+						<a href="tel:+380737770222">+38 (073) 777-0-222</a>
+						<a href="tel:+380686980850">+38 (068) 698-0-850</a>
 					</address>
 					<div class="foot_links">
 						<ul class="foot_list">
-							<li><a href="viber:add//?number=380988502763" class="foot_item">
+							<li><a href="viber:add//?number=380686980850" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-viber"></use>
 								</svg>
 							</a></li>
-							<li><a href="telegram:add//?number=380988502763" class="foot_item">
+							<li><a href="tg://resolve?domain=@lawyeeronline" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-telegram"></use>
 								</svg>
 							</a></li>
-							<li><a href="whatsapp:add//?number=79161200286" class="foot_item">
+							<li><a href="https://wa.me/380686980850" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-whatsapp"></use>
 								</svg>
@@ -297,8 +295,15 @@
 			</div>
 		</footer>
 		<!-- /.F-O-O-T-E-R -->
-	<script src="index.js">
-	</script>
+		<div class="confirm" id="confirm">
+			<div class="confirm_field">
+				<p class="confirm_msg">Сообщение отправлено</p>
+				<div class="confirm_btn" onclick="unConfirmSend()"></div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+	<script src="script.js"></script>
+	<!-- <script src="/js/toast.min.js"></script> -->
 	<script src="./js/flickity.pkgd.js"></script>
 </body>
 </html>
