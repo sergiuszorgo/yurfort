@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="./css/flickity.css">
 	<!-- <link rel="stylesheet" href="./css/toast.min.css"> -->
 	<title>Юридична Сила</title>
@@ -28,31 +28,19 @@
 		<input id="burger" type="checkbox" class="menucheck">
 		<label for="burger" class="navburger"></label>
 		<ul class="burger_list">
-			<li class="burger_item"><a href="#our_info" class="burger_link">Про нас</a></li>
-			<li class="burger_item"><a href="#our_services" class="burger_link">Наші послуги</a></li>
-			<li class="burger_item"><a href="#consult" class="burger_link">Юрист онлайн</a></li>
-			<li class="burger_item"><a href="#feed_back" class="burger_link">Відгуки</a></li>
-			<li class="burger_item"><a href="#footer" class="burger_link">Контакти</a></li>
+			<li class="burger_item"><a href="#our_info" class="burger_link" onclick='brgrSwitch()'>Про нас</a></li>
+			<li class="burger_item"><a href="#our_services" class="burger_link" onclick='brgrSwitch()'>Наші послуги</a></li>
+			<li class="burger_item"><a href="#consult" class="burger_link" onclick='brgrSwitch()'>Юрист онлайн</a></li>
+			<li class="burger_item"><a href="#feed_back" class="burger_link" onclick='brgrSwitch()'>Відгуки</a></li>
+			<li class="burger_item"><a href="#footer" class="burger_link" onclick='brgrSwitch()'>Контакти</a></li>
 		</ul>
 	</div>
 	</header>
-	<!-- /.header -->
-	<!-- <div class="backdrop">
-		<div class="greyfield"></div>
-		<div class="whitefield">
-			<ul class="burger_list">
-				<li class="burger_item"><a href="#our_info" class="burger_link">Про нас</a></li>
-				<li class="burger_item"><a href="#our_services" class="burger_link">Наші послуги</a></li>
-				<li class="burger_item"><a href="#consult" class="burger_link">Юрист онлайн</a></li>
-				<li class="burger_item"><a href="#feed_back" class="burger_link">Відгуки</a></li>
-				<li class="burger_item"><a href="#footer" class="burger_link">Контакти</a></li>
-			</ul>
-		</div>
-		<div class="menu-btn"></div>
-	</div> -->
-	<!-- /.backdrop -->
 		<div class="hero">
 			<div class="hero_wrap">
+				<svg class="hero_logo">
+					<use href="./img/symbols.svg#icon-vesi"></use>
+				</svg>
 				<h1 class="hero_head">Безкоштовна консультація з будь-яких юридичних питань</h1>
 			<p class="hero_descr">Ми здійснюємо безкоштовні консультації для громадян з усіх питань, пов’язаних з правовою сферою та законами України!</p>
 			<a href="#form" class="hero_btn">залишити заявку</a>
@@ -267,11 +255,11 @@
 				</div>
 		</div>
 		<!-- /.feed_back -->
-		<div class="wrapper" id="articles">
+		<!-- <div class="wrapper" id="articles">
 			<div class="articles">
 				
 			</div>
-		</div>
+		</div> -->
 		<!-- /.articles -->
 		<footer>
 			<div class="adr_list" id="footer">
@@ -286,17 +274,17 @@
 					</address>
 					<div class="foot_links">
 						<ul class="foot_list">
-							<li><a href="viber:add//?number=380988502763" class="foot_item">
+							<li><a href="viber:add//?number=380686980850" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-viber"></use>
 								</svg>
 							</a></li>
-							<li><a href="telegram:add//?number=380988502763" class="foot_item">
+							<li><a href="tg://resolve?domain=@lawyeeronline" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-telegram"></use>
 								</svg>
 							</a></li>
-							<li><a href="whatsapp:add//?number=79161200286" class="foot_item">
+							<li><a href="https://wa.me/380686980850" class="foot_item">
 								<svg class="foot_icon">
 									<use href="./img/symbols.svg#icon-whatsapp"></use>
 								</svg>
@@ -307,8 +295,14 @@
 			</div>
 		</footer>
 		<!-- /.F-O-O-T-E-R -->
+		<div class="confirm" id="confirm">
+			<div class="confirm_field">
+				<p class="confirm_msg">Сообщение отправлено</p>
+				<div class="confirm_btn" onclick="unConfirmSend()"></div>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-	<script src="index.js"></script>
+	<script src="script.js"></script>
 	<!-- <script src="/js/toast.min.js"></script> -->
 	<script src="./js/flickity.pkgd.js"></script>
 </body>

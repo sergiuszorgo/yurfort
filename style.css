@@ -15,7 +15,6 @@
 }
 
 * {
-	/* background-color: #f6f0ea; */
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -63,6 +62,13 @@ header, .hero, .wrapper, footer {
 	margin-right: auto;
 }
 
+.section_grid,
+.services,
+.consult, 
+.feed_back {
+	padding-top: 80px;
+}
+
 .wrapper {
 	background-color: var(--main-bg-col);
 }
@@ -73,7 +79,7 @@ header {
 	position: -webkit-sticky;
   position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 300;
 }
 
 .header_hidden {
@@ -185,48 +191,6 @@ header {
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// HEADER*/
 
-.backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	pointer-events: none;
-	transition: var(--transit);
-}
-
-.backdrop.is-open {
-	opacity: 1;
-	pointer-events: initial;
-}
-
-.backdrop.is-open .whitefield {
-	transform: translateX(0);
-}
-
-.greyfield {
-	position: absolute;
-	top: 60px;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
-}
-
-.whitefield {
-	position: absolute;
-	top: 60px;
-	right: 0;
-	width: 80vw;
-	height: 100%;
-	background-color: var(--main-bg-col);
-	transform: translateX(200%);
-	transition: 0.5s;
-}
-
 .burger_list {
 	position: absolute;
 	top: 60px;
@@ -330,12 +294,31 @@ header {
 }
 
 .hero_wrap {
+	padding-bottom: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
 }
+
+.hero_logo {
+	fill: var(--accent-col);
+	width: 200px;
+	height: 200px;
+	opacity: 0.4;
+}
+
+@media (min-width: 1200px) {
+	.hero_wrap {
+		padding-bottom: 100px;
+	}
+	.hero_logo {
+		width: 350px;
+		height: 350px;
+	}
+}
+
 
 .hero_head {
 	font-size: 2em;
@@ -353,7 +336,7 @@ header {
 
 .hero_btn {
 	display: inline-block;
-	margin-top: 100px;
+	margin-top: 20px;
 	padding: 12px 22px;
 	background-color: var(--accent-col);
 	color: var(--main-bg-col);
@@ -403,7 +386,6 @@ header {
 }
 
 .section_grid, .services {
-	padding-top: 20px;
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: column;
@@ -698,7 +680,6 @@ svg.icon {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding-top: 20px;
 	padding-bottom: 40px;
 }
 
@@ -721,10 +702,6 @@ svg.icon {
 	padding: 20px 0;
 	background-color: var(--third-bg-col);
 	font-size: 16px;
-}
-
-.alert {
-	
 }
 
 .toast_show {
@@ -917,4 +894,80 @@ footer {
 		align-items: end;
 		justify-content: space-between;
 	}
+}
+
+/* CONFIRM */
+
+.confirm {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 400;
+}
+
+.no_scroll {
+	overflow: hidden;
+}
+
+.confirm_field {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--accent-col);
+	border-radius: 10px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.confirm_msg {
+	cursor: default;
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.confirm_btn {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.confirm_btn::before {
+	background-color: var(--main-bg-col);
+	position: absolute;
+	content: '';
+	width: 28px;
+	height: 3px;
+	transform: rotate(45deg);
+}
+
+.confirm_btn::after {
+	background-color: var(--main-bg-col);
+	position: absolute;
+	content: '';
+	width: 28px;
+	height: 3px;
+	transform: rotate(-45deg);
+}
+
+.testbtn {
+	width: 80px;
+	height: 60px;
+	background-color: var(--accent-col);
+	border-radius: 10px;
+	cursor: pointer;
 }

@@ -1,32 +1,13 @@
+
+const burger = document.getElementById('burger');
+const confirm = document.getElementById('confirm');
+const bodyPage = document.querySelector('body');
+
 // HAMBURG START
-// const Burger = document.querySelector('.burger');
-// const Backdrop = document.querySelector('.backdrop');
-// const Grey = document.querySelector('.greyfield');
-// const CloseBtn = document.querySelector('.menu-btn');
 
-// function MenuOpen(event) {
-// 	event.preventDefault();
-
-// 	Burger.classList.add('active');
-// 	Backdrop.classList.add('is-open');
-
-// 	Grey.addEventListener('click', MenuClose);
-// 	CloseBtn.addEventListener('click', MenuClose);
-// }
-
-// function MenuClose(event) {
-// 	event.preventDefault();
-
-// 	Grey.removeEventListener('click', MenuClose);
-// 	CloseBtn.removeEventListener('click', MenuClose);
-
-// 	Burger.classList.remove('active');
-// 	Backdrop.classList.remove('is-open');
-// }
-
-// Burger.addEventListener('click', MenuOpen);
-
-// HAMBURG END
+function brgrSwitch() {
+    burger.checked = false;
+}
 
 //SCROLLMENU START
 
@@ -57,9 +38,22 @@ document.addEventListener('DOMContentLoaded' , () => {
 	onScroll();
 })
 
-//SCROLLMENU END
+//CONFIRM
+
+function confirmSend() {
+    bodyPage.classList.add('no_scroll')
+    confirm.style.display = 'block';
+}
+
+function unConfirmSend() {
+    bodyPage.classList.remove('no_scroll')
+    confirm.style.display = 'none';
+}
+
+
 
 //FORM
+
 const TOKEN = '6928321854:AAEg424YNG1sOJwcwyCVnEaWQjMXyAKePOY';
 const CHAT_ID = '-1002088725739';
 const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
@@ -82,8 +76,9 @@ document.getElementById('tg').addEventListener('submit', function (e) {
         this.name.value = '';
         this.tel.value = '';
         this.message.value = '';
-        success.innerHTML = 'Сообщение отправлено';
-        success.style.display = 'block';
+        confirmSend();
+        // success.innerHTML = 'Сообщение отправлено';
+        // success.style.display = 'block';
 		
     })
     .catch((err) => {
@@ -95,6 +90,7 @@ document.getElementById('tg').addEventListener('submit', function (e) {
 })
 
 //FORM
+
 
 //DIFFICULTY
 
