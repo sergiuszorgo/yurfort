@@ -4,7 +4,8 @@
 	--main-bg-col: #FFF;
 	--main-text-col: #212121;
 	--sec-bg-col: #FFEBD9;
-	--accent-col: #FA5513;
+	--accent-col: #e2a62d;
+	/* --accent-col: #FA5513; */
 	--sec-text-col: #06071A;
 	--third-bg-col: #F5F4FA;
 	--box-card-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
@@ -303,10 +304,10 @@ header {
 }
 
 .hero_logo {
-	fill: var(--accent-col);
+	fill: var(--main-bg-col);
 	width: 200px;
 	height: 200px;
-	opacity: 0.4;
+	opacity: 0.8;
 }
 
 @media (min-width: 1200px) {
@@ -326,6 +327,7 @@ header {
 	text-align: center;
 	margin-bottom: 20px;
 	font-weight: 500;
+	text-transform: uppercase;
 }
 
 .hero_descr {
@@ -720,7 +722,7 @@ svg.icon {
 }
 
 .form_submit {
-	width: 234px;
+	/* width: 234px; */
 	cursor: pointer;
 	display: block;
     text-align: center;
