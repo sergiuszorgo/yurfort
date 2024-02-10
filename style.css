@@ -393,8 +393,16 @@ header {
 	flex-direction: column;
 }
 
-.about_company, .our_services, .consult_head, .feed_h2 {
+.about_company, .our_services, .feed_h2 {
 	color: var(--accent-col);
+}
+
+.consult_head {
+	color: var(--main-bg-col);
+}
+
+.about_company, .our_services, .consult_head, .feed_h2 {
+	/* color: var(--accent-col); */
 	margin-bottom: 20px;
 	font-size: 2.2em;
 	font-weight: 400;
@@ -447,7 +455,7 @@ header {
 	padding: 0 12px;
 }
 
-.section_info p, .consult_text p, .consult_text p {
+.section_info p, .consult_text p {
 	font-size: 18px;
 	margin-bottom: 20px;
 	text-align: justify;
@@ -675,7 +683,13 @@ svg.icon {
 /* /////////FORM////////// */
 
 #consult {
-	background-color: var(--third-bg-col);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-02.jpg);
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(./img/hero-img-02.jpg);
+	/* background-color: var(--third-bg-col); */
 }
 
 .consult {
@@ -683,6 +697,10 @@ svg.icon {
 	align-items: center;
 	flex-direction: column;
 	padding-bottom: 40px;
+}
+
+.consult_text p {
+	color: var(--main-bg-col);
 }
 
 .consult_form {
@@ -700,10 +718,15 @@ svg.icon {
 	outline: none;
 	border: none;
 	border-radius: 0;
-	border-bottom: 1px solid var(--main-text-col);
+	border-bottom: 1px solid var(--main-bg-col);
 	padding: 20px 0;
-	background-color: var(--third-bg-col);
-	font-size: 16px;
+	background-color: transparent;
+	font-size: 20px;
+	color: var(--main-bg-col);
+}
+
+.form_input::placeholder, .form_area::placeholder {
+	color: var(--main-bg-col);
 }
 
 .toast_show {
@@ -781,7 +804,7 @@ svg.icon {
 
 .main-gallery {
 	padding: 10px 0;
-	height: 640px;
+	height: 350px;
 	/* background: var(--sec-bg-col); */
 }
 
