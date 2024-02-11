@@ -36,7 +36,7 @@
 		</ul>
 	</div>
 	</header>
-		<div class="hero">
+		<div class="hero" id="hero">
 			<div class="hero_wrap">
 				<svg class="hero_logo">
 					<use href="./img/symbols.svg#icon-vesi"></use>
@@ -142,7 +142,7 @@
 							<div class="services_child srv-six">
 							</div>
 							<div class="services_bott">
-								<p class="services_title">Адміністративні послуги</p>
+								<p class="services_title">Адміністративні справи</p>
 								<a class="services_tit_link">Детальніше</a>
 							</div>
 						</li>
@@ -188,7 +188,7 @@
 				<div class="consult_text">
 					<h2 class="consult_head">Потрібна консультація експерта?</h2>
 					<p><span>Ви можете поставити запитання фахівцю і почати вирішення пи-тання вже зараз.</span></p>
-					<p>Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирі-шення.</p>
+					<p>Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирішення.</p>
 					<p><span>Наша компанія спеціалізується на захисті прав простих людей і має великий досвід в юридичній сфері.</span></p>
 				</div>
 				<div id="form" class="consult_form" >
@@ -289,17 +289,17 @@
 					<div class="foot_links">
 						<ul class="foot_list">
 							<li><a href="viber:add//?number=380686980850" class="foot_item">
-								<svg class="foot_icon">
+								<svg class="foot_icon viber">
 									<use href="./img/symbols.svg#icon-viber"></use>
 								</svg>
 							</a></li>
 							<li><a href="tg://resolve?domain=@ghostofkyiv777" class="foot_item">
-								<svg class="foot_icon">
+								<svg class="foot_icon telegram">
 									<use href="./img/symbols.svg#icon-telegram"></use>
 								</svg>
 							</a></li>
 							<li><a href="https://wa.me/380686980850" class="foot_item">
-								<svg class="foot_icon">
+								<svg class="foot_icon whatsapp">
 									<use href="./img/symbols.svg#icon-whatsapp"></use>
 								</svg>
 							</a></li>
@@ -311,13 +311,14 @@
 		<!-- /.F-O-O-T-E-R -->
 		<div class="confirm" id="confirm">
 			<div class="confirm_field">
-				<p class="confirm_msg">Сообщение отправлено</p>
-				<div class="confirm_btn" onclick="unConfirmSend()"></div>
+				<p class="confirm_msg">Дякуємо Вам за довіру!
+				</p>
+				<p class="confirm_msg">Очікуйте дзвінок протягом 15 хвилин.</p>
+				<a href="#hero" class="confirm_link" onclick="unConfirmSend()">На головну</a>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 	<script src="script.js"></script>
-	<!-- <script src="/js/toast.min.js"></script> -->
 	<script src="./js/flickity.pkgd.js"></script>
 </body>
 </html>

@@ -13,6 +13,9 @@
 	--sec-border-col: #EEEEEE;
 	--function: cubic-bezier(0.4, 0, 0.2, 1);
 	--transit: 0.25s;
+	--viber-color: #6F5CEA;
+	--telegram-color: #27A6E6;
+	--whatsapp-color: #2BB741;
 }
 
 * {
@@ -804,12 +807,11 @@ svg.icon {
 
 .main-gallery {
 	padding: 10px 0;
-	height: 350px;
-	/* background: var(--sec-bg-col); */
+	height: 390px;
 }
 
 .gallery-cell {
-  width: 88%;
+  width: 80%;
 	height: 100%;
 	margin-right: 10px;
 	border-radius: 5px;
@@ -822,7 +824,7 @@ svg.icon {
 }
 
 @media screen and ( min-width: 768px ) {
-  .gallery-cell { width: 50%; }
+  .gallery-cell { width: 40%; }
 }
 
 .gallery-img {
@@ -898,10 +900,19 @@ footer {
 }
 
 .foot_icon {
-	fill: var(--accent-col);
 	width: 32px;
 	height:	32px;
 	transition: var(--transit);	
+}
+
+.foot_icon.viber {
+	fill: var(--viber-color);
+}
+.foot_icon.telegram {
+	fill: var(--telegram-color);
+}
+.foot_icon.whatsapp {
+	fill: var(--whatsapp-color);
 }
 
 .foot_icon:hover {
@@ -924,7 +935,8 @@ footer {
 /* CONFIRM */
 
 .confirm {
-	display: none;
+	/* display: none; */
+	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -940,42 +952,67 @@ footer {
 
 .confirm_field {
 	position: absolute;
-	width: 200px;
-	height: 100px;
+	width: 300px;
+	padding: 30px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: var(--accent-col);
+	background-color: var(--main-bg-col);
 	border-radius: 10px;
 	text-align: center;
 	display: flex;
+	gap: 10px;
+	flex-direction: column;
 	align-items: center;
 }
 
 .confirm_msg {
 	cursor: default;
-	color: #ffffff;
+	color: var(--sec-text-col);
 	font-weight: 500;
 	font-size: 18px;
+	line-height: 1.5em;
 }
+
+.confirm_link {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 12px 22px;
+	background-color: var(--accent-col);
+	color: var(--main-bg-col);
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: var(--transit);
+}
+
+.confirm_link:hover {
+	background-color: var(--main-bg-col);
+	color: var(--sec-text-col);
+	border-color: var(--accent-col);
+} 
 
 .confirm_btn {
 	cursor: pointer;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 4px;
+	right: 4px;
 	width: 40px;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: 1px solid var(--main-bg-col);
+	border-radius: 50%;
 }
 
 .confirm_btn::before {
 	background-color: var(--main-bg-col);
 	position: absolute;
 	content: '';
-	width: 28px;
+	width: 20px;
 	height: 3px;
 	transform: rotate(45deg);
 }
@@ -984,7 +1021,7 @@ footer {
 	background-color: var(--main-bg-col);
 	position: absolute;
 	content: '';
-	width: 28px;
+	width: 20px;
 	height: 3px;
 	transform: rotate(-45deg);
 }
