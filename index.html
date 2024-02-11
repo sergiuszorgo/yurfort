@@ -5,12 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="./css/flickity.css">
-	<!-- <link rel="stylesheet" href="./css/toast.min.css"> -->
 	<title>Юридична Сила</title>
 </head>
 <body>
 	<header class="header">
 	<div class="menu">
+		<svg class="menu_logo">
+			<use href="./img/symbols.svg#icon-vesi"></use>
+		</svg>
 		<p class="logo">"Юридична сила"</p>
 		<ul class="header_list">
 			<li class="header_item"><a href="#our_info" class="header_link">Про нас</a></li>
@@ -18,6 +20,21 @@
 			<li class="header_item"><a href="#consult" class="header_link">Юрист онлайн</a></li>
 			<li class="header_item"><a href="#feed_back" class="header_link">Відгуки</a></li>
 			<li class="header_item"><a href="#footer" class="header_link">Контакти</a></li>
+		</ul>
+		<ul class="header_icons">
+			<li><a href="viber://chat?number=380686980850" class="foot_item">
+				<svg class="foot_icon viber">
+					<use href="./img/symbols.svg#icon-viber"></use>
+				</svg></a></li>
+			<li><a href="https://t.me/+380686980850" class="foot_item">
+				<svg class="foot_icon telegram">
+					<use href="./img/symbols.svg#icon-telegram"></use>
+				</svg></a></li>
+			<li><a href="https://wa.me/380686980850" class="foot_item">
+				<svg class="foot_icon whatsapp">
+					<use href="./img/symbols.svg#icon-whatsapp"></use>
+				</svg></a>
+			</li>
 		</ul>
 		<address>
 			<a href="tel:+380737770222">+38 (073) 777-0-222</a>
@@ -33,17 +50,35 @@
 			<li class="burger_item"><a href="#consult" class="burger_link" onclick='brgrSwitch()'>Юрист онлайн</a></li>
 			<li class="burger_item"><a href="#feed_back" class="burger_link" onclick='brgrSwitch()'>Відгуки</a></li>
 			<li class="burger_item"><a href="#footer" class="burger_link" onclick='brgrSwitch()'>Контакти</a></li>
+			<li class="burger_icons">
+				<ul class="icon_list">
+					<li><a href="viber://chat?number=380686980850" class="foot_item">
+						<svg class="foot_icon viber">
+							<use href="./img/symbols.svg#icon-viber"></use>
+						</svg></a></li>
+					<li><a href="https://t.me/+380686980850" class="foot_item">
+						<svg class="foot_icon telegram">
+							<use href="./img/symbols.svg#icon-telegram"></use>
+						</svg></a></li>
+					<li><a href="https://wa.me/380686980850" class="foot_item">
+						<svg class="foot_icon whatsapp">
+							<use href="./img/symbols.svg#icon-whatsapp"></use>
+						</svg></a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 	</header>
 		<div class="hero" id="hero">
 			<div class="hero_wrap">
+				<p class="site_name">"Юридична сила"</p>
 				<svg class="hero_logo">
 					<use href="./img/symbols.svg#icon-vesi"></use>
 				</svg>
 				<h1 class="hero_head">Досвід. Професіоналізм. Ефективність. Успіх.</h1>
 			<p class="hero_descr">Юридична сила – це команда професіоналів, які працюють для досягнення позитивного результату в кожній справі клієнта!</p>
-			<a href="#form" class="hero_btn">отримати допомогу</a>
+			<a href="#form" class="hero_btn light_btn">отримати допомогу</a>
 			</div>
 		</div>
 		<!-- /.hero -->
@@ -52,12 +87,12 @@
 				<div class="section_info">
 					<div class="about_text">
 						<h2 class="about_company">Про компанію</h2>
-					<p>“Юридична Сила” — це компанія, з послугами якої ви будете почувати себе, як за титановою стіною! Довірте нам свої справи — та отримуйте високоякісні послуги провідних фахівців з права в Україні без обмежень.</p>
-					<p><span>Наша мета</span> - домогтися позитивного результату у справі, надавши клієнту доступну, якісну та кваліфіковану юридичну допомогу.</p>
-					<p><span>Наше правило: Успіх наших клієнтів - це наш успіх!</span></p>
+					<p class="text_standart">“Юридична Сила” — це компанія, з послугами якої ви будете почувати себе, як за титановою стіною! Довірте нам свої справи — та отримуйте високоякісні послуги провідних фахівців з права в Україні без обмежень.</p>
+					<p class="text_standart"><span>Наша мета</span> - домогтися позитивного результату у справі, надавши клієнту доступну, якісну та кваліфіковану юридичну допомогу.</p>
+					<p class="text_standart"><span>Наше правило: Успіх наших клієнтів - це наш успіх!</span></p>
 					</div>
 					<div class="about_us_btn">
-						<a href="#" class="about_link">Детальніше про нас</a>
+						<a href="#" class="about_link light_btn">Детальніше про нас</a>
 					</div>
 				</div>
 				<div class="about_info">
@@ -187,9 +222,12 @@
 			<div class="consult">
 				<div class="consult_text">
 					<h2 class="consult_head">Потрібна консультація експерта?</h2>
-					<p><span>Поставте запитання фахівцю, і почніть вирішення питання вже зараз!</span></p>
-					<p>Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирішення.</p>
-					<p><span>Наша компанія спеціалізується на захисті прав простих людей і має великий досвід в юридичній сфері.</span></p>
+					<p class="text_standart"><span>Поставте запитання фахівцю, і почніть вирішення питання вже зараз!</span></p>
+					<p class="text_standart">Вас проконсультує <span>команда з багаторічним досвідом і стажем.</span> Вам буде надано правовий аналіз вашої проблеми, алгоритм дій та шляхи її вирішення.</p>
+					<p class="text_standart"><span>Наша компанія спеціалізується на захисті прав простих людей і має великий досвід в юридичній сфері.</span></p>
+					<div class="consult_discount">
+						<p class="discount_text">Перша консультація <span>безкоштовна!</span></p>
+					</div>
 				</div>
 				<div id="form" class="consult_form" >
 					<form id="tg" class="consult_group">
@@ -197,8 +235,8 @@
 						<input type="tel" name="tel" placeholder="Введіть телефон" class="form_input" pattern="[\+]\d{2}\[\(]\d{3}[\)]\\d{3}\d{2}\d{2}" minlength="5" maxlength="19" required>
 						<textarea name="message" rows="5" maxlength="500" placeholder="Коротко опишіть проблему" class="form_area"></textarea>
 						<!-- <div id="success" class="alert" style="display: block">Сообщение отправлено</div> -->
-						<span class="submin_span">
-							<input type="submit" value="Замовити консультацію" class="form_submit">
+						<span class="submit_span">
+							<input type="submit" value="Замовити консультацію" class="form_submit light_btn">
 						</span>
 						<!-- без заголовка -->
 					</form>

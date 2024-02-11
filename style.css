@@ -4,8 +4,8 @@
 	--main-bg-col: #FFF;
 	--main-text-col: #212121;
 	--sec-bg-col: #FFEBD9;
-	--accent-col: #e2a62d;
-	/* --accent-col: #FA5513; */
+	/* --accent-col: #e2a62d; */
+	--accent-col: #FA5513;
 	--sec-text-col: #06071A;
 	--third-bg-col: #F5F4FA;
 	--box-card-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
@@ -99,6 +99,13 @@ header {
 	justify-content: space-between;
 }
 
+.menu_logo {
+	display: none;
+	height: 60px;
+	width: 60px;
+	fill: var(--main-bg-col);
+}
+
 .logo {
 	font-family: 'Comfortaa';
 	color: var(--main-bg-col);
@@ -155,6 +162,10 @@ header {
 	display: none;
 }
 
+.header_icons {
+	display: none;
+}
+
 .menu address a:hover {
 	color: var(--main-bg-col);
 }
@@ -176,7 +187,17 @@ header {
 		flex-direction: column;
 		gap: 5px;
 	}
+	.menu_logo {
+		display: block;
+	}
+	.logo {
+		display: none;
+	}
 	.header_list {
+		display: flex;
+		gap: 20px;
+	}
+	.header_icons {
 		display: flex;
 		gap: 20px;
 	}
@@ -210,6 +231,11 @@ header {
 	background-color: var(--sec-text-col);
 	gap: 0;
 	padding-top: 0;
+}
+
+.icon_list {
+	display: flex;
+	gap: 10px;
 }
 
 .menucheck:checked ~ .burger_list {
@@ -274,15 +300,6 @@ header {
 	color: var(--accent-col);
 }
 
-.menu-btn {
-	position: absolute;
-	top: 0;
-	right: 15px;
-	width: 60px;
-	height: 60px;
-	cursor: pointer;
-}
-
 /* ///////////////////////////////////////////////BACKDROP */
 
 .hero {
@@ -306,6 +323,13 @@ header {
 	height: 100%;
 }
 
+.site_name {
+	font-family: 'Comfortaa';
+	color: var(--main-bg-col);
+	font-size: 38px;
+	display: none;
+}
+
 .hero_logo {
 	fill: var(--main-bg-col);
 	width: 200px;
@@ -314,6 +338,9 @@ header {
 }
 
 @media (min-width: 1200px) {
+	.site_name {
+		display: block;
+	}
 	.hero_wrap {
 		padding-bottom: 100px;
 	}
@@ -338,8 +365,9 @@ header {
 	text-align: center;
 	font-size: 1.1em;
 }
+/* hero_btn */
 
-.hero_btn {
+.light_btn {
 	display: inline-block;
 	margin-top: 20px;
 	padding: 12px 22px;
@@ -351,9 +379,11 @@ header {
 	border: 1px solid transparent;
 	border-radius: 4px;
 	transition: var(--transit);
+	font-size: 16px;
+	cursor: pointer;
 }
 
-.hero_btn:hover {
+.light_btn:hover {
 	background-color: var(--main-bg-col);
 	color: var(--sec-text-col);
 	border-color: var(--accent-col);
@@ -402,6 +432,31 @@ header {
 
 .consult_head {
 	color: var(--main-bg-col);
+}
+
+.consult_discount {
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+	transform: skew(-20deg);
+	background: red;
+}
+
+.discount_text {
+	text-align: center;
+	cursor: default;
+	font-weight: 600;
+	font-size: 20px;
+	display: inline-block;
+}
+
+.discount_text span {
+	text-transform: uppercase;
 }
 
 .about_company, .our_services, .consult_head, .feed_h2 {
@@ -458,7 +513,7 @@ header {
 	padding: 0 12px;
 }
 
-.section_info p, .consult_text p {
+.text_standart {
 	font-size: 18px;
 	margin-bottom: 20px;
 	text-align: justify;
@@ -732,44 +787,20 @@ svg.icon {
 	color: var(--main-bg-col);
 }
 
-.toast_show {
-	display: block;
-  }
-
 .consult_group textarea {
 	resize: none;
 }
 
-.submin_span {
+.submit_span {
 	margin-top: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.form_submit {
-	/* width: 234px; */
-	cursor: pointer;
-	display: block;
-    text-align: center;
-    padding: 12px 22px;
-    background-color: var(--accent-col);
-    color: var(--main-bg-col);
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px #00000026;
-    transition: var(--transit);
-	font-size: 16px;
-}
-
-.form_submit:hover {
-	background-color: var(--main-bg-col);
-	color: var(--sec-text-col);
-	border-color: var(--accent-col);
-}
+/* .hero_btn, .form_submit {
+	border: 1px solid var(--main-bg-col);
+} */
 
 @media (min-width: 768px) {
 	.input_tel_mail {
@@ -992,43 +1023,3 @@ footer {
 	color: var(--sec-text-col);
 	border-color: var(--accent-col);
 } 
-
-.confirm_btn {
-	cursor: pointer;
-	position: absolute;
-	top: 4px;
-	right: 4px;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid var(--main-bg-col);
-	border-radius: 50%;
-}
-
-.confirm_btn::before {
-	background-color: var(--main-bg-col);
-	position: absolute;
-	content: '';
-	width: 20px;
-	height: 3px;
-	transform: rotate(45deg);
-}
-
-.confirm_btn::after {
-	background-color: var(--main-bg-col);
-	position: absolute;
-	content: '';
-	width: 20px;
-	height: 3px;
-	transform: rotate(-45deg);
-}
-
-.testbtn {
-	width: 80px;
-	height: 60px;
-	background-color: var(--accent-col);
-	border-radius: 10px;
-	cursor: pointer;
-}
