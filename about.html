@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/flickity.css">
+    <title>Юридична Сила</title>
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+            <a href="index.html" class="start">
+                <svg class="menu_logo">
+                    <use href="./img/symbols.svg#icon-vesi"></use>
+                </svg>
+            </a>
+            <p class="logo">"Юридична сила"</p>
+            <ul class="header_list">
+                <li class="header_item"><a href="index.html" class="header_link">Про нас</a></li>
+                <li class="header_item"><a href="#our_services" class="header_link">Наші послуги</a></li>
+                <li class="header_item"><a href="#consult" class="header_link">Юрист онлайн</a></li>
+                <li class="header_item"><a href="#feed_back" class="header_link">Відгуки</a></li>
+                <li class="header_item"><a href="#footer" class="header_link">Контакти</a></li>
+            </ul>
+            <ul class="header_icons">
+                <li><a href="viber://chat?number=380686980850" class="foot_item">
+                    <svg class="foot_icon viber">
+                        <use href="./img/symbols.svg#icon-viber"></use>
+                    </svg></a></li>
+                <li><a href="https://t.me/+380686980850" class="foot_item">
+                    <svg class="foot_icon telegram">
+                        <use href="./img/symbols.svg#icon-telegram"></use>
+                    </svg></a></li>
+                <li><a href="https://wa.me/380686980850" class="foot_item">
+                    <svg class="foot_icon whatsapp">
+                        <use href="./img/symbols.svg#icon-whatsapp"></use>
+                    </svg></a>
+                </li>
+            </ul>
+            <address>
+                <a href="tel:+380737770222">+38 (073) 777-0-222</a>
+                <a href="tel:+380686980850">+38 (068) 698-0-850</a>
+            </address>
+            <!-- <div class="burger">
+            </div> -->
+            <input id="burger" type="checkbox" class="menucheck">
+            <label for="burger" class="navburger"></label>
+            <ul class="burger_list">
+                <li class="burger_item"><a href="index.html" class="burger_link" onclick='brgrSwitch()'>Про нас</a></li>
+                <li class="burger_item"><a href="#our_services" class="burger_link" onclick='brgrSwitch()'>Наші послуги</a></li>
+                <li class="burger_item"><a href="#consult" class="burger_link" onclick='brgrSwitch()'>Юрист онлайн</a></li>
+                <li class="burger_item"><a href="#feed_back" class="burger_link" onclick='brgrSwitch()'>Відгуки</a></li>
+                <li class="burger_item"><a href="#footer" class="burger_link" onclick='brgrSwitch()'>Контакти</a></li>
+                <li class="burger_icons">
+                    <ul class="icon_list">
+                        <li><a href="viber://chat?number=380686980850" class="foot_item">
+                            <svg class="foot_icon viber">
+                                <use href="./img/symbols.svg#icon-viber"></use>
+                            </svg></a></li>
+                        <li><a href="https://t.me/+380686980850" class="foot_item">
+                            <svg class="foot_icon telegram">
+                                <use href="./img/symbols.svg#icon-telegram"></use>
+                            </svg></a></li>
+                        <li><a href="https://wa.me/380686980850" class="foot_item">
+                            <svg class="foot_icon whatsapp">
+                                <use href="./img/symbols.svg#icon-whatsapp"></use>
+                            </svg></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </header>
+        <!-- dasj;lkasd;ljkdas;ljkasd;ljk;ljkasd;ljkasd -->
+        <div class="wrapper">
+            <div class="aboutpage">
+                <h2 class="about_company">Про компанію</h2>
+                <p class="text_standart">Юридична сила - молода українська компанія, яка була заснована в місті Одесі фахівцями <span>з багаторічним досвідом роботи у сфері юриспруденції</span>. Над створенням компанії працювали найкращі уми з усіх куточків нашої кра-їни. Ми зібрали справжніх "акул" у сфері права, які стоятимуть на боці наших клієнтів!</p>
+                <p class="text_standart">«Юридична Сила» створена в 2020 році. На сьогоднішній день, компа-нію представляють більше ніж 15 талановитих юристів, сфера практичної дія-льності яких охоплює всі галузі права.</p>
+                <p class="text_standart"><span>Наша компанія надає професійні та доступні послуги у сфері юрис-пруденції.</span></p>
+                <p class="text_standart">Вчасна юридична допомога — це важливо! Ми намагаємося надавати послуги адвокатів якнайшвидше, щоб не витрачати час своїх клієнтів. Вже
+                за 15 хвилин після звернення, у робочі години, ви отримаєте первинну юри-дичну поміч та відповіді на свої запитання.</p>
+            </div>
+        </div>
+        <div class="wrapper accord">
+            <div class="aboutpage_accordeon">
+                <h3 class="accord_head">Поширені запитання</h3>  
+                    <div class="accordeon_page">
+                        <input class="accord_inp" type="radio" name="radio" id="radio1" checked="checked">
+                        <label class="accord_lab" for="radio1">
+                            Чому я повинен довіряти компанії «Юридична Сила»?
+                        </label>
+                        <div class="accordeon_text">
+                            <p class="text_standart">Наша компанія пропонує доступні та професійні послуги для кожної верстви наших громадян, надаючи ефективну юридичну допомогу. Вашою справою будуть займатися найкращі юристи, які зроблять все можливе для того, щоб досягти успіху на стороні нашого клієнта. Наша компанія керу-ється правилом «Успіх наших клієнтів – це наш успіх».</p>
+                        </div>
+                        <input class="accord_inp" type="radio" name="radio" id="radio2">
+                        <label class="accord_lab" for="radio2">
+                            Чим відрізняються послуги юриста від послуг адвоката?
+                        </label>
+                        <div class="accordeon_text">
+                            <p class="text_standart">Відмінність криється в повноваженнях. Юрист — це людина, яка здо-була юридичну освіту. Адвокат — це юрист, який додатково має посвідчення адвоката (оскільки в судах ваші інтереси, найчастіше може представляти саме адвокат. Юрист може представляти ваші інтереси за довіреністю, в ма-лозначних справах, які чітко визначені законом). Умовно кажучи: адвокат – це обов’язково людина, яка має повну вищу юридичну освіту, має посвід-чення адвоката та може представляти ваші інтереси в будь-яких процесах.</p>
+                        </div>
+                        <input class="accord_inp" type="radio" name="radio" id="radio3">
+                        <label class="accord_lab" for="radio3">
+                            Як я можу зрозуміти, що отримую послуги компанії в повному об-сязі?
+                        </label>
+                        <div class="accordeon_text">
+                            <p class="text_standart">В нашій компанії ми обов’язково інформуємо клієнтів про те, які дії та кроки роблять наші фахівці, ми обговорюємо з клієнтами кожен крок, обира-ємо найкращі варіанти в рамках закону, та надаємо звіти виконаної роботи. Все, що ми робимо і плануємо зробити під час вирішення вашого питання, ви знатимете наперед.</p>
+                        </div>
+                        <input class="accord_inp" type="radio" name="radio" id="radio4">
+                        <label class="accord_lab" for="radio4">
+                            Які гарантії ви надаєте?
+                        </label>
+                        <div class="accordeon_text">
+                            <p class="text_standart">Ми гарантуємо якість, швидкість, професіоналізм та доступність нада-них послуг. Наші спеціалісти будуть з вами на зв’язку майже завжди.</p>
+                        </div>
+                    </div>           
+            </div>
+        </div>
+        <!-- dasj;lkasd;ljkdas;ljkasd;ljk;ljkasd;ljkasd -->
+        <footer>
+			<div class="adr_list" id="footer">
+				<div class="foot_text">
+					<h2>"Юридична сила"</h2>
+				<p>Ви можете приїхати до нас особисто і ми обговоримо на місці всі необхідні питання, які потребують негайного вирішення!</p>
+				</div>
+				<div class="foot_adress">
+					<address class="foot_adr">
+						<a href="tel:+380737770222">+38 (073) 777-0-222</a>
+						<a href="tel:+380686980850">+38 (068) 698-0-850</a>
+					</address>
+					<div class="foot_links">
+						<ul class="foot_list">
+							<!-- <li><a href="viber:add//?number=380686980850" class="foot_item"> -->
+							<li><a href="viber://chat?number=380686980850" class="foot_item">
+								<svg class="foot_icon viber">
+									<use href="./img/symbols.svg#icon-viber"></use>
+								</svg>
+							</a></li>
+							<!-- <li><a href="tg://resolve?domain=@ghostofkyiv777" class="foot_item"> -->
+							<li><a href="https://t.me/+380686980850" class="foot_item">
+								<svg class="foot_icon telegram">
+									<use href="./img/symbols.svg#icon-telegram"></use>
+								</svg>
+							</a></li>
+							<li><a href="https://wa.me/380686980850" class="foot_item">
+								<svg class="foot_icon whatsapp">
+									<use href="./img/symbols.svg#icon-whatsapp"></use>
+								</svg>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <script src="script.js">
+            
+        </script>
+</body>
+</html>

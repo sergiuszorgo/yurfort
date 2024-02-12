@@ -74,7 +74,9 @@ header, .hero, .wrapper, footer {
 .callback,
 .questions,
 .adr_list,
-.feed_back {
+.feed_back,
+.aboutpage,
+.aboutpage_accordeon {
 	max-width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -85,8 +87,11 @@ header, .hero, .wrapper, footer {
 .section_grid,
 .services,
 .consult, 
-.feed_back {
+.feed_back,
+.aboutpage,
+.aboutpage_accordeon {
 	padding-top: 80px;
+	padding-bottom: 40px;
 }
 
 .wrapper {
@@ -113,6 +118,10 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.start {
+	cursor: pointer;
 }
 
 .menu_logo {
@@ -437,7 +446,7 @@ header {
 }
 
 .section_grid, .services {
-	padding-bottom: 40px;
+	/* padding-bottom: 40px; */
 	display: flex;
 	flex-direction: column;
 }
@@ -477,13 +486,10 @@ header {
 }
 
 .about_company, .our_services, .consult_head, .feed_h2 {
-	/* color: var(--accent-col); */
 	margin-bottom: 20px;
 	font-size: 2.2em;
 	font-weight: 400;
 	text-decoration: none;
-	border-bottom: 2px solid var(--hover-col);
-	/* display: inline-block; */
 	text-align: center;
 }
 
@@ -532,9 +538,13 @@ header {
 
 .text_standart {
 	font-size: 18px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-align: justify;
 } 
+
+.text_standart span {
+	font-weight: 700;
+}
 
 .about_info {
 	display: flex;
@@ -1040,3 +1050,65 @@ footer {
 	color: var(--sec-text-col);
 	border-color: var(--accent-col);
 } 
+
+/* ABOUTPAGE */
+
+.accord {
+	background-color: var(--third-bg-col);
+}
+
+.accord_head {
+	margin-bottom: 20px;
+	font-size: 2.2em;
+	font-weight: 400;
+	text-decoration: none;
+	color: var(--accent-col);
+}
+
+.accord_inp {
+	display: none;
+}
+
+.accord_lab {
+	background: var(--main-bg-col);
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: var(--main-text-col);
+    margin-bottom: 5px;
+}
+
+.accord_lab::before {
+	content: '\276F';
+    float: right;
+    transition: var(--transit);
+}
+
+.accord_inp:checked + .accord_lab::before {
+    transform: rotate(90deg);
+}
+
+.accordeon_text {
+	width: calc(100% - 40px);
+    height: 0;
+    margin: 0 auto; 
+    background: var(--main-bg-col);
+    padding: 0 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
+}
+
+.accord_inp:checked + .accord_lab {
+    background: var(--accent-col);
+    color: var(--main-bg-col);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3), 0 10px 8px rgba(0, 0, 0, 0.4);
+}
+
+.accord_inp:checked + .accord_lab + .accordeon_text {
+    height: auto;
+    padding: 10px 20px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
