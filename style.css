@@ -5,7 +5,23 @@
 	--main-text-col: #212121;
 	--sec-bg-col: #FFEBD9;
 	/* --accent-col: #e2a62d; */
-	--accent-col: #FA5513;
+	/* --accent-col: #18A3E6; */
+	/* --accent-col: #FA5513; */
+	--accent-col: #F27B3F;
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #778899; */
+	/* --accent-col: #008080; */
+	/* --accent-col: #F4A460; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
+	/* --accent-col: #D2691E; */
 	--sec-text-col: #06071A;
 	--third-bg-col: #F5F4FA;
 	--box-card-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000F, 0px 1px 1px 0px #0000001F;
@@ -103,7 +119,7 @@ header {
 	display: none;
 	height: 60px;
 	width: 60px;
-	fill: var(--main-bg-col);
+	fill: var(--accent-col);
 }
 
 .logo {
@@ -435,8 +451,9 @@ header {
 }
 
 .consult_discount {
-	padding: 20px;
-	width: 100%;
+	margin: 0 auto;
+	padding: 12px;
+	width: 80%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
