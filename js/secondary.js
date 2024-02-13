@@ -1,12 +1,25 @@
 const burger = document.getElementById('burger');
 const confirm = document.getElementById('confirm');
 const bodyPage = document.querySelector('body');
-
+const helpBack = document.getElementById('help_back');
 // HAMBURG START
 
 function brgrSwitch() {
     burger.checked = false;
 }
+
+// MODAL OPEN
+
+function modalOpen() {
+	bodyPage.classList.add('no_scroll')
+	helpBack.style.display = 'block';
+}
+
+function modalClose() {
+	bodyPage.classList.remove('no_scroll')
+	helpBack.style.display = 'none'
+}
+// style.display = 'block';
 
 //SCROLLMENU START
 
@@ -75,7 +88,8 @@ document.getElementById('tg').addEventListener('submit', function (e) {
         this.name.value = '';
         this.tel.value = '';
         this.message.value = '';
-        confirmSend();
+				bodyPage.classList.remove('no_scroll');
+				helpBack.style.display = 'none';
         // success.innerHTML = 'Сообщение отправлено';
         // success.style.display = 'block';
 		
@@ -84,9 +98,7 @@ document.getElementById('tg').addEventListener('submit', function (e) {
         console.log(err);
     }) 
     .finally(() => {
-        console.log('End');
+			confirmSend();
+      console.log('End');
     })
 })
-
-//FORM
-
