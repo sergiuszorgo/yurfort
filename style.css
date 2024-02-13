@@ -633,7 +633,6 @@ svg.icon {
 
 .services_item {
 	overflow: hidden;
-	cursor: pointer;
 	position: relative;
 	height: 300px;
 	width: 100%;
@@ -1254,3 +1253,34 @@ footer {
 	transform: rotate(-45deg);
 }
 
+/* CARDS-STYLE */
+
+.about_head_text {
+	font-weight: 600;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.about_red_text {
+	font-weight: 600;
+	margin-bottom: 14px;
+	color: var(--accent-col);
+	font-size: 22px;
+}
+
+.about_list {
+	margin-left: 20px;
+	list-style: disc;
+}
+
+.about_list_item {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.about_text_bold {
+	font-weight: 600;
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 20px;
+}
